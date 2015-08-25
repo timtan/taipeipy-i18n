@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 
 {% load i18n %}
+{% load static %}
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
+
 </head>
 <body>
 
     <h1>{% trans 'It Works' %}</h1>
 
     {{ message }}
+
+    <script src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
+    <script src="{% static 'show.js' %}"></script>
 
 </body>
 </html>
