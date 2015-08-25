@@ -1,9 +1,12 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
+#!/usr/bin/python
 
 import gettext 
-gettext.install('example', localedir='/Users/tim/Projects/i18ntalk/pure_python')
+import os.path
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+gettext.install('example', localedir=current_dir)
 
 print( _('Hello!')) 
-
-
+print( _('World!')) 
